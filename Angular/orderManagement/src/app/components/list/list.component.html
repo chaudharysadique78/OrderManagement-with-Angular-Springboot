@@ -1,0 +1,24 @@
+<h1 style="text-align:center;margin: 4%">List of Orders</h1>
+<div style="margin: 2%;">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Brand</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of orders; index as i">
+        <td>#P{{u.id}}</td>
+        <td>{{u.orderName}}</td>
+        <td>{{u.orderPrice | currency:"INR"}}</td>
+        <td>{{u.brand}}</td>
+        <td><button type="button" (click)="deleteRow(u,i)" class="btn btn-danger">Delete</button> &nbsp; 
+          <button type="button" routerLink="/update/{{u.id}}" class="btn btn-danger">Update</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

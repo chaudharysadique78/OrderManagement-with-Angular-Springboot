@@ -1,0 +1,24 @@
+<div class="container text-center">
+    <h1>Order Form</h1>
+    <br>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+            <input type="text" name="orderName"[(ngModel)]="order.orderName" placeholder="Enter product name" class="form-control"
+                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <br>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Price</span>
+            <input type="text" name="orderPrice" [(ngModel)]="order.orderPrice" placeholder="Enter product price" class="form-control"
+                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <br>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Brand</span>
+            <input type="text" name="brand"  [(ngModel)]="order.brand" placeholder="Enter product brand" class="form-control"
+                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <br>
+        <button type="submit" routerLink="/orderplace" (click)="save()" class="btn btn-success btn-lg">Submit</button>
+        <br>
+</div>
